@@ -1,1 +1,159 @@
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  min-height: 100vh;
+  background: #09090f;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+button,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  padding: 28px 20px;
+  background: #11111c;
+  border-right: 1px solid #29293a;
+}
+
+.logo {
+  font-size: 23px;
+  font-weight: bold;
+  color: #a78bfa;
+  margin-bottom: 40px;
+}
+
+.nav button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 9px;
+  color: #aaa;
+  background: transparent;
+  border: 0;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.nav button:hover,
+.nav button.active {
+  background: #7139db;
+  color: white;
+}
+
+.content {
+  flex: 1;
+  padding: 35px;
+  min-width: 0;
+}
+
+.header {
+  margin-bottom: 35px;
+}
+
+.header h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.muted {
+  color: #9999ad;
+  line-height: 1.6;
+}
+
+.panel {
+  padding: 25px;
+  margin-bottom: 25px;
+  background: #151522;
+  border: 1px solid #29293a;
+  border-radius: 16px;
+}
+
+.panel h2 {
+  margin-bottom: 12px;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  min-height: 120px;
+  margin-top: 18px;
+  padding: 15px;
+  color: white;
+  background: #09090f;
+  border: 1px solid #38384b;
+  border-radius: 10px;
+  resize: vertical;
+}
+
+.primary {
+  margin-top: 15px;
+  padding: 12px 20px;
+  color: white;
+  background: #7c3aed;
+  border: 0;
+  border-radius: 9px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.card {
+  padding: 22px;
+  background: #151522;
+  border: 1px solid #29293a;
+  border-radius: 15px;
+}
+
+.card h3 {
+  margin-bottom: 12px;
+}
+
+@media (max-width: 750px) {
+  .container {
+    display: block;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: 0;
+    border-bottom: 1px solid #29293a;
+  }
+
+  .logo {
+    margin-bottom: 18px;
+  }
+
+  .content {
+    padding: 22px 16px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
